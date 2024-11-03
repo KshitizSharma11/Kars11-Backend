@@ -1,7 +1,6 @@
 
-const getCars=async()=>{
-  const response=await fetch('https://api.example.com/cars')
-  return await response.json()
+const getCars=async(req:any,res:any)=>{
+ res.send("it works");
 };
 
 export const CarsController={

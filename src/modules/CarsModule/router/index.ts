@@ -1,9 +1,7 @@
-import { CarsController } from '../controller/index.js';
-import Fastify from 'fastify';
-const router = Fastify();
+import { CarsController } from "../controller/index.js";
+import { FastifyInstance } from "fastify";
 
-export const carsRoutes=async()=>{
-router.get('/',CarsController.getCars);
+// Define carsRoutes as a function that accepts Fastify's instance
+export async function carsRoutes(router: FastifyInstance) {
+  router.get("/", CarsController.getCars);
 }
-
-
